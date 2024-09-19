@@ -34,16 +34,11 @@ export default function LayoutFooter() {
 
   return (
     <AppBar position="fixed" color="primary" sx={{ top: "auto", bottom: 0 }}>
-      <Tabs
-        value={focused}
-        variant="fullWidth"
-        indicatorColor="primary"
-        textColor='inherit'
-      >
+      <Tabs value={focused} variant="fullWidth" indicatorColor="primary" textColor='inherit'>
         <Tab
           component={Link}
           icon={
-            focused === 'home' ? (
+            focused === 'home' ?  (
               <Box component="img" src={homeActiveIcon}/>
             ) : (
               <Box component="img" src={homeIcon}/>
