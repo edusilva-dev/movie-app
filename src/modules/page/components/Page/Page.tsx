@@ -20,7 +20,7 @@ export default function Page(props: PropsWithChildren<PageProps>) {
       maxWidth={false}
       sx={{ maxWidth: 1072, zIndex: 0 }}
     >
-      <Stack gap={6}>{children}</Stack>
+      <Stack gap={2.5}>{children}</Stack>
     </Container>
   );
 }

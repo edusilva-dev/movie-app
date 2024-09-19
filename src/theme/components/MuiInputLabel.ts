@@ -6,8 +6,8 @@ const MuiInputLabel: Components<Theme>['MuiInputLabel'] = {
   },
   styleOverrides: {
     root: ({ theme }) => ({
-      ...theme.typography.body1,
-      color: '#000000',
+      ...theme.typography.h3,
+      color: '#ffffff33',
       fontWeight: 500,
     }),
     shrink: {

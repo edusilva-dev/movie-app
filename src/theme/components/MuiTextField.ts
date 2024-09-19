@@ -12,8 +12,9 @@ const MuiTextField: Components<Theme>['MuiTextField'] = {
       },
       style: ({ theme }) => ({
         [`.${inputBaseClasses.root}`]: {
+          backgroundColor: theme.palette.grey[800],
           padding: `${theme.spacing(2)} ${theme.spacing(3)}`,
-          borderRadius: theme.shape.borderRadius * 2,
+          borderRadius: theme.shape.borderRadius * 0.25, // 10px
         },
       }),
     },
