@@ -1,6 +1,8 @@
 import { Page, PageContent, PageHeader } from "@modules/page";
-import { Stack, Typography } from "@mui/material";
+import { CircularProgress, Stack, Typography } from "@mui/material";
 import { SearchField } from "@modules/search-field";
+import { Suspense } from "react";
+import { SearchResult } from "./components";
 
 export default function Search() {
   return (
@@ -15,8 +17,15 @@ export default function Search() {
         canGoBack
       />
       <PageContent>
-        <Stack>
+        <Stack gap={3}>
           <SearchField />
+          <Suspense fallback={
+            <Stack width='100%' alignItems='center' justifyContent='center'>
+              <CircularProgress />
+            </Stack>
+          }>
+            <SearchResult />
+          </Suspense>
         </Stack>
       </PageContent>
     </Page>
