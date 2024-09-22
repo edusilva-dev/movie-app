@@ -4,6 +4,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Outlet } from "react-router-dom";
 import theme from "@theme";
 import { Suspense } from "react";
+import { GenreProvider } from "@modules/genre";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: false, retry: false, throwOnError: false } },
@@ -17,11 +18,13 @@ export default function AppRouteProviders() {
         <Suspense
           fallback={
             <Stack alignItems="center" justifyContent="center" height="100vh">
-              <CircularProgress sx={{ color: 'primary.light' }} />
+              <CircularProgress sx={{ color: 'primary' }} />
             </Stack>
           }
         >
-          <Outlet />
+          <GenreProvider>
+            <Outlet />
+          </GenreProvider>
         </Suspense>
         <ReactQueryDevtools />
       </QueryClientProvider>
