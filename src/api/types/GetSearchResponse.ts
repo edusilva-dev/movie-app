@@ -1,11 +1,11 @@
 export type GetSearchResponse = {
   page: number,
-  results: Array<Result>
+  results: Array<MovieResult>
   total_pages: number
   total_results: number
 }
 
-export type Result = {
+export type MovieResult = {
   adult?: boolean;
   backdrop_path?: string;
   genre_ids: number[];
